@@ -1,0 +1,3 @@
+[submodule "simple-mailer"]
+	path = simple-mailer
+	url = https://github.com/davidbwire/simple-mailer
