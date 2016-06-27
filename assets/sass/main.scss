@@ -52,3 +52,14 @@ grid: ( gutters: 1.5em )
 @import 'layout/footer';
 @import 'layout/sidebar';
 @import 'layout/intro';
+
+
+.button-success{
+    background-color: _palette(accent3);
+}
+.button-primary{
+    background-color: _palette(accent1);
+}
+.menu{
+    color: rgba(255,255,255,0.8)!important;
+}
