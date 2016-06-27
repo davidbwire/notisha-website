@@ -5,7 +5,7 @@
 */
 /* Type */
 h1.major:after {
-  background: #a5c53a; }
+  background: #8bc34a; }
 
 /* Wrapper */
 .wrapper.fullscreen {
@@ -46,7 +46,7 @@ h1.major:after {
 
 /* Sidebar */
 #sidebar nav a:after {
-  background-color: #a5c53a; }
+  background-color: #8bc34a; }
 
 /* Header */
 #header:after {

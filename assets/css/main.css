@@ -1324,10 +1324,10 @@ h1 {
     position: relative;
     padding-bottom: 0.35em; }
     h1.major:after {
-      background-image: -moz-linear-gradient(to right, #0091ea, #a5c53a);
-      background-image: -webkit-linear-gradient(to right, #0091ea, #a5c53a);
-      background-image: -ms-linear-gradient(to right, #0091ea, #a5c53a);
-      background-image: linear-gradient(to right, #0091ea, #a5c53a);
+      background-image: -moz-linear-gradient(to right, #0091ea, #8bc34a);
+      background-image: -webkit-linear-gradient(to right, #0091ea, #8bc34a);
+      background-image: -ms-linear-gradient(to right, #0091ea, #8bc34a);
+      background-image: linear-gradient(to right, #0091ea, #8bc34a);
       -moz-transition: max-width 0.2s ease;
       -webkit-transition: max-width 0.2s ease;
       -ms-transition: max-width 0.2s ease;
@@ -1906,7 +1906,7 @@ input[type="radio"] {
   input[type="radio"]:checked + label:before {
     background: #ffffff;
     border-color: #ffffff;
-    color: #a5c53a;
+    color: #8bc34a;
     content: '\f00c'; }
   input[type="checkbox"]:focus + label:before,
   input[type="radio"]:focus + label:before {
@@ -1974,9 +1974,9 @@ input[type="radio"] + label:before {
       .wrapper.style2-alt .icon.major:before {
         color: #3e4094; }
       .wrapper.style3 .icon.major:before {
-        color: #a5c53a; }
+        color: #8bc34a; }
       .wrapper.style3-alt .icon.major:before {
-        color: #849e2e; }
+        color: #71a436; }
 
 /* Image */
 .image {
@@ -2393,9 +2393,9 @@ table {
   .wrapper.style2-alt {
     background-color: #3e4094; }
   .wrapper.style3 {
-    background-color: #a5c53a; }
+    background-color: #8bc34a; }
   .wrapper.style3-alt {
-    background-color: #849e2e; }
+    background-color: #71a436; }
   .wrapper.fullscreen {
     display: -moz-flex;
     display: -webkit-flex;
@@ -2742,10 +2742,10 @@ table {
     #sidebar nav a:before {
       background: #3c2c62; }
     #sidebar nav a:after {
-      background-image: -moz-linear-gradient(to right, #0091ea, #a5c53a);
-      background-image: -webkit-linear-gradient(to right, #0091ea, #a5c53a);
-      background-image: -ms-linear-gradient(to right, #0091ea, #a5c53a);
-      background-image: linear-gradient(to right, #0091ea, #a5c53a);
+      background-image: -moz-linear-gradient(to right, #0091ea, #8bc34a);
+      background-image: -webkit-linear-gradient(to right, #0091ea, #8bc34a);
+      background-image: -ms-linear-gradient(to right, #0091ea, #8bc34a);
+      background-image: linear-gradient(to right, #0091ea, #8bc34a);
       -moz-transition: max-width 0.2s ease;
       -webkit-transition: max-width 0.2s ease;
       -ms-transition: max-width 0.2s ease;
@@ -2809,7 +2809,7 @@ table {
           padding: 0; }
           #sidebar nav a:after {
             background-image: none;
-            background-color: #a5c53a; } }
+            background-color: #8bc34a; } }
   @media screen and (max-width: 736px) {
     #sidebar {
       display: none; } }
