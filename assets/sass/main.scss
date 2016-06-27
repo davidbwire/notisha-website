@@ -57,6 +57,9 @@ grid: ( gutters: 1.5em )
 .button-success{
     background-color: _palette(accent3);
 }
+.button-success-alt{
+    background-color: _palette(accent3-alt);
+}
 .button-primary{
     background-color: _palette(accent1);
 }
