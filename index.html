@@ -48,7 +48,7 @@
             <!-- One -->
             <section id="how-it-works" class="wrapper style3 spotlights">
                 <section>
-                    <a href="#" class="image" style="background-attachment: scroll"><img id="auto-resize" src="images/screenshot-438-612.png" alt="" data-position="top center" /></a>
+                    <a href="#" class="image"><img src="images/screenshot-438-612.png" alt="" data-position="top center" /></a>
                     <div class="content">
                         <div class="inner">
                             <h2>How it works</h2>
@@ -217,23 +217,6 @@
                 $(this).parent('a').attr('href', h);
                 return e + a + d + c;
             });
-        </script>
-        <script type="text/javascript">
-            $(function () {
-                update_image();
-                $(window).resize(function () {
-                    update_image();
-                });
-            });
-            function update_image() {
-                var width = $(window).width();
-                if (width < 450) {
-                    var picwidth = 100;
-                } else {
-                    var picwidth = 300;
-                }
-                //$('#auto-resize').attr('src', 'timthumb.php?src=myimage.jpg&h=300w=' + picwidth + '&q=100');
-            }
         </script>
 
     </body>
