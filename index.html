@@ -15,17 +15,10 @@
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <script src="/bower_components/mobile-detect/mobile-detect.min.js" type="text/javascript"></script>
         <script>
-            var md = new MobileDetect(window.navigator.userAgent);
-            alert(md.mobile());          // 'Sony'
-            alert(md.phone());           // 'Sony'
-            alert(md.tablet());          // null
-            alert(md.userAgent());       // 'Safari'
-            alert(md.os());              // 'AndroidOS'
-            alert(md.is('Android'));      // false
-            alert(md.is('bot'));         // false
-            alert(md.version('Webkit'));         // 534.3
-            alert(md.versionStr('Build'));       // '4.1.A.0.562'
-            alert(md.match('android|Android')); // false
+            var userAgent = window.navigator.userAgent || '';
+            var isAndroid = userAgent.match(/android|Android/);
+            alert(isAndroid);
+            alert(userAgent);
         </script>
     </head>
     <body>
