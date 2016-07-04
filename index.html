@@ -15,7 +15,7 @@
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <script>
             var userAgent = window.navigator.userAgent || '',
-                    isAndroid = /android|Android/.test(userAgent),
+                    isAndroid = /Android|android/.test(userAgent),
                     appLinkAndroidWeb = "https://play.google.com/store/apps/details?id=com.ninechat.android.chat",
                     appLinkAndroidApp = "market://details?id=com.ninechat.android.chat";
         </script>
@@ -120,15 +120,16 @@
                     </p>
                     <h3 class="color-success">How is the expiry date calculated?</h3>
                     <p>  If let's say you subscribe to the <b>1 Month</b> plan today, your expiry date
-                        will be 30 days from today. <br>
-                        The <b>6 Months</b> and <b>1 Year</b> plans delay your plan expiry by adding an extra 15 days and 2 months respectively.
+                        will be 30 days from today. The <b>6 Months</b> and <b>1 Year</b> plans delay your plan expiry by adding an extra 15 days and 2 months respectively.
                     </p>
 
                     <h3 class="color-success">What happens when my plan expires?</h3>
                     <p> When your plan expires you will be automatically transitioned to the free plan. You
                         will have to renew your preferred plan to continue receiving daily tips and advice.</p>
-                    <h3 class="color-success">When are you going to make the app for the Web, iOs or Windows Phone 7?</h3>
-                    <p>We are currently working on making the Android experiences as solid as possible. Next on our product pipeline will be to build for the most requested platform. You may place your request via the form below.</p>
+                    <div class="hidden hide-android">
+                        <h3 class="color-success">When are you going to make the app for the Web, iOs or Windows Phone 7?</h3>
+                        <p>We are currently working on making the Android experiences as solid as possible. Next on our product pipeline will be to build for the most requested platform. You may place your request via the form below.</p>
+                    </div>
                     <ul class="actions">
                         <li><a href="market://details?id=com.ninechat.android.chat" class="button button-success download-notisha">Download Notisha for FREE</a></li>
                     </ul>
@@ -217,9 +218,19 @@
         <script src="assets/js/main.js"></script>
         <script>
             $(document).ready(function () {
-                if (!isAndroid) {
+                if (isAndroid) {
+                    $('.hide-android').each(function () {
+                        $(this).addClass('hidden');
+                        $(this).removeClass('show');
+                    });
+                } else {
+                    // it's not Android
                     $('.download-notisha').each(function () {
                         $(this).attr('href', appLinkAndroidWeb);
+                    });
+                    $('.hide-android').each(function () {
+                        $(this).removeClass('show');
+                        $(this).addClass('hidden');
                     });
                 }
                 $('#simple').html(function () {

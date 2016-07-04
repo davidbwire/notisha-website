@@ -2848,4 +2848,12 @@ table {
 .color-success {
   color: #8bc34a; }
 
+.hidden {
+  visibility: hidden;
+  display: none; }
+
+.show {
+  visibility: visible;
+  display: block; }
+
 /*# sourceMappingURL=main.css.map */

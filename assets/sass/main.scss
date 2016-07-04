@@ -69,3 +69,11 @@ grid: ( gutters: 1.5em )
 .color-success{
     color: _palette(accent3);
 }
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+.show{
+    visibility: visible;
+    display: block;
+}
