@@ -13,12 +13,11 @@
         <link rel="stylesheet" href="assets/css/main.css" />
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-        <script src="/bower_components/mobile-detect/mobile-detect.min.js" type="text/javascript"></script>
         <script>
-            var userAgent = window.navigator.userAgent || '';
-            var isAndroid = /android|Android/.test(userAgent);
-            alert(isAndroid);
-            alert(userAgent);
+            var userAgent = window.navigator.userAgent || '',
+                    isAndroid = /android|Android/.test(userAgent),
+                    appLinkAndroidWeb = "https://play.google.com/store/apps/details?id=com.ninechat.android.chat",
+                    appLinkAndroidApp = "market://details?id=com.ninechat.android.chat";
         </script>
     </head>
     <body>
@@ -46,7 +45,7 @@
                     <h1>Notisha</h1>
                     <p>Notisha is your personal coach and advisor. We source and share with you the best relationship tips and marriage advice, on a daily basis.</p>
                     <ul class="actions">
-                        <li><a href="#download" class="button button-success">Download Notisha for FREE</a></li>
+                        <li><a href="market://details?id=com.ninechat.android.chat" class="button button-success download-notisha">Download Notisha for FREE</a></li>
                         <li><a href="#how-it-works" class="button scrolly">Learn more</a></li>
                     </ul>
                 </div>
@@ -60,7 +59,7 @@
                         <div class="inner">
                             <h2>How it works</h2>
                             <ol class="">
-                                <li><a href="#">Download</a> and install Notisha.</li>
+                                <li><a href="market://details?id=com.ninechat.android.chat" class="download-notisha">Download</a> and install Notisha.</li>
                                 <li>Register by providing your name, relationship status and mobile number.</li>
                                 <li>Seat back and receive the best tips and advice from leading marriage counsellors and relationship experts.</li>
                             </ol>
@@ -130,7 +129,7 @@
                         will have to renew your preferred plan to continue receiving daily tips and advice.</p>
 
                     <ul class="actions">
-                        <li><a href="#" class="button button-success">Download Notisha for FREE</a></li>
+                        <li><a href="market://details?id=com.ninechat.android.chat" class="button button-success download-notisha">Download Notisha for FREE</a></li>
                     </ul>
                 </div>
             </section>
@@ -215,14 +214,21 @@
         <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
         <script src="assets/js/main.js"></script>
         <script>
-            $('#simple').html(function () {
-                var e = "info";
-                var a = "@";
-                var d = "notisha";
-                var c = ".com";
-                var h = 'mailto:' + e + a + d + c;
-                $(this).parent('a').attr('href', h);
-                return e + a + d + c;
+            $(document).ready(function () {
+                if (!isAndroid) {
+                    $('.download-notisha').each(function () {
+                        $(this).attr('href', appLinkAndroidWeb);
+                    });
+                }
+                $('#simple').html(function () {
+                    var e = "info";
+                    var a = "@";
+                    var d = "notisha";
+                    var c = ".com";
+                    var h = 'mailto:' + e + a + d + c;
+                    $(this).parent('a').attr('href', h);
+                    return e + a + d + c;
+                });
             });
         </script>
         <script>
