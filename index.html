@@ -16,7 +16,7 @@
         <script src="/bower_components/mobile-detect/mobile-detect.min.js" type="text/javascript"></script>
         <script>
             var userAgent = window.navigator.userAgent || '';
-            var isAndroid = userAgent.match(/android|Android/);
+            var isAndroid = /android|Android/.test(userAgent);
             alert(isAndroid);
             alert(userAgent);
         </script>
