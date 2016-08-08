@@ -25,6 +25,8 @@
         <script>
             var userAgent = window.navigator.userAgent || '',
                     isAndroid = /Android|android/.test(userAgent),
+                    isIoS = /iPad|iPhone|iPod/.test(userAgent),
+                    isWindows = /Windows Phone|WPDesktop/.test(userAgent),
                     appLinkAndroidWeb = "https://play.google.com/store/apps/details?id=com.notisha.android",
                     appLinkAndroidApp = "market://details?id=com.notisha.android";
         </script>
@@ -38,7 +40,7 @@
                     <ul>
                         <li><a href="#intro">Welcome</a></li>
                         <li><a href="#how-it-works">How it works</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
+                        <li style="display:none"><a href="#pricing">Pricing</a></li>
                         <li><a href="#contact-us">Get in touch</a></li>
                     </ul>
                 </nav>
@@ -53,6 +55,8 @@
                 <div class="inner">
                     <h1>Notisha</h1>
                     <p>Notisha is your personal coach and advisor. We source and share the best marital advice on a daily basis.</p>
+                    <p style="font-size: 14px; color: #ddd;" class="non-android-message hidden"><i>You seem to be using a non-Android device. We are currently working on making the Android experience as solid as possible. Next on our product pipeline will be to build for the most requested platform. You may place your request via the <a href="#contact-us">form below</a>.</i></p>
+
                     <ul class="actions">
                         <li><a href="market://details?id=com.notisha.android" class="button button-success download-notisha">Install Notisha for FREE</a></li>
                         <li><a href="#how-it-works" class="button scrolly">Learn more</a></li>
@@ -86,7 +90,7 @@
             </section>
 
             <!-- Two -->
-            <section id="pricing" class="wrapper style2 fade-up">
+            <section id="pricing" class="wrapper style2 fade-up" style="display:none">
                 <div class="inner">
                     <h2>How much does it cost?</h2>
                     <p>We have a free plan and paid plans. The plan you subscribe to determines the number of days you will
@@ -251,6 +255,12 @@
                         $(this).removeClass('hidden');
                         $(this).addClass('show');
                     });
+                    if (!isIoS || isWindows) {
+                        $('.non-android-message').each(function () {
+                            $(this).removeClass('hidden');
+                            $(this).addClass('show');
+                        });
+                    }
                 }
                 $('#simple').html(function () {
                     var e = "info";
