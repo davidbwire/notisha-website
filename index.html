@@ -255,7 +255,7 @@
                         $(this).removeClass('hidden');
                         $(this).addClass('show');
                     });
-                    if (!(isIoS || isWindows)) {
+                    if (isIoS || isWindows) {
                         $('.non-android-message').each(function () {
                             $(this).removeClass('hidden');
                             $(this).addClass('show');
